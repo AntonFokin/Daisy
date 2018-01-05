@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("GothamBold", "../../fonts/GothamPro/GothamProBold/GothamProBold");
+@include font-face("AgoraSansProThin", "../../fonts/AgoraSansPro/AgoraSansProThin/AgoraSansProThin");
+@include font-face("AgoraSansProBold", "../../fonts/AgoraSansPro/AgoraSansProBold/AgoraSansProBold");
+@include font-face("AgoraSansProLight", "../../fonts/AgoraSansPro/AgoraSansProLight/AgoraSansProLight");
+@include font-face("AgoraSansProMedium", "../../fonts/AgoraSansPro/AgoraSansProMedium/AgoraSansProMedium");

@@ -1,0 +1,15 @@
+@media(max-width: 960px){
+	#wedo-section, #advertising-section, #marketing-section{
+		.wrap{
+			.text-info{
+				float: none;
+				max-width: 100%;
+			}
+			.img{
+				float: none;
+				max-width: 100%;
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
