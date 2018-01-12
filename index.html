@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Daisy</title>
-	<link rel="stylesheet" href="./styles/css/main.css">
+	<link rel="stylesheet" href="lib/slick/slick/slick.css" type="text/css"/>
+	<link rel="stylesheet" href="lib/slick/slick/slick-theme.css" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.3/css/all.css">
+	<link rel="stylesheet" href="/styles/css/main.css">
 </head>
 <body>
 	<div id="top-section">
@@ -14,13 +18,23 @@
 				</a>
 				<nav class="menu-holder">
 					<ul class="menu-navigation">
-						<li><a href="#">about</a></li>
-						<li><a href="#">portfolio</a></li>
-						<li><a href="#">services</a></li>
-						<li><a href="#">contact</a></li>
+						<li><a href="#offers-section" title="about">about</a></li>
+						<li><a href="#portfolio-section" title="portfolio">portfolio</a></li>
+						<li><a href="#wedo-section" title="services">services</a></li>
+						<li><a href="#our-team" title="contact">contact</a></li>
 					</ul>
 				</nav>
-				<div class="banner-info">
+				<div  class="morphing-menu">
+					<span class="cls"></span>
+						<span>
+							<ul class="sub-menu">
+								<li><a href="#offers-section" title="about">about</a></li>
+								<li><a href="#portfolio-section" title="portfolio">portfolio</a></li>
+								<li><a href="#wedo-section" title="services">services</a></li>
+								<li><a href="#our-team" title="contact">contact</a></li>
+							</ul>
+						</span>
+					<span class="cls"></span>
 				</div>
 			</header>
 			<div class="banner-info">
@@ -121,7 +135,7 @@
 				<div class="text-info common-in-text-info">
 					<h3>landing pages</h3>
 					<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-					<a href="#" class="button">More details</a>
+					<a href="#" class="my-button ipsum-button">More details</a>
 				</div>
 			</div>
 			<div class="arrow">
@@ -138,7 +152,7 @@
 				<div class="text-info common-in-text-info">
 					<h3>landing pages</h3>
 					<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-					<a href="#" class="button">More details</a>
+					<a href="#" class="my-button ipsum-button">More details</a>
 				</div>
 			</div>
 			<div class="arrow">
@@ -155,7 +169,7 @@
 				<div class="text-info common-in-text-info">
 					<h3>landing pages</h3>
 					<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-					<a href="#" class="button">More details</a>
+					<a href="#" class="my-button ipsum-button">More details</a>
 				</div>
 			</div>
 			<div class="arrow">
@@ -177,28 +191,160 @@
 			</nav>
 			<div class="pictures-grid">
 				<div class="picture-block">
-					<div class="full-picture"><img src="/images/bike.png" alt="bike"></div>
-					<div class="half-picture"><img src="/images/paints.png" alt="paints"></div>
-					<div class="half-picture"><img src="/images/bus.png" alt="bus"></div>
+					<div class="full-picture"><img src="/images/grid/bike.png" alt="bike"></div>
+					<div class="half-picture"><img src="/images/grid/package.png" alt="paints"></div>
+					<div class="half-picture"><img src="/images/grid/page.png" alt="bus"></div>
 				</div>
 				<div class="picture-block">
-					<div class="full-picture"><img src="/images/package.png" alt="package"></div>
-					<div class="half-picture"><img src="/images/page.png" alt="page"></div>
-					<div class="half-picture"><img src="/images/cars.png" alt="cars"></div>
+					<div class="half-picture"><img src="/images/grid/paints.png" alt="package"></div>
+					<div class="half-picture"><img src="/images/grid/bus.png" alt="page"></div>
+					<div class="full-picture"><img src="/images/grid/cars.png" alt="cars"></div>
+				</div>
+			</div>
+			<a href="#" class="my-button">I want landing page</a>
+			<div class="arrow">
+				<img class="arrow-btn" src="/images/icons/red-arrow.png" alt="arrow">
+			</div>
+		</div>
+	</div>
+	<div id="our-team">
+		<div class="wrapper">
+			<h3>our<span>team</span></h3>
+			<ul class="team">
+				<li>
+					<div class="hex-avatar">
+						<img src="/images/team/bowman.png" alt="bowman">
+					</div>
+					<h3><span>tomothy</span> bowman</h3>
+					<p>Marketing</p>
+					<ul class="social">
+						<li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="linkedin"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="hex-avatar">
+						<img src="/images/team/tracy.png" alt="tracy">
+					</div>
+					<h3><span>steve</span> tracy</h3>
+					<p>CEO</p>
+					<ul class="social">
+						<li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="linkedin"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="hex-avatar">
+						<img src="/images/team/johns.png" alt="johns">
+					</div>
+					<h3><span>hellen</span> johns</h3>
+					<p>Clients</p>
+					<ul class="social">
+						<li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="linkedin"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="arrow">
+				<img class="arrow-btn" src="/images/icons/red-arrow.png" alt="arrow">
+			</div>
+		</div>
+	</div>
+	<div id="personal-info">
+		<div class="wrapper">
+			<div class="quotes">
+				<div class="hexagon">
+					<div class="hex-inner">
+						<img src="/images/icons/quotes.png" alt="quotes">
+					</div>
+				</div>
+			</div>
+			<div class="team-slider">
+				<div class="slide">
+					<div class="table">
+						<div class="text">
+							<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+						</div>
+						<div class="hex-avatar">
+							<img src="/images/team/alan.png" alt="Alan">
+						</div>
+						<div class="info">
+							<h3><span>alan</span> richman</h3>
+							<p>CEO of Romashka</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="table">
+						<div class="text">
+							<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+						</div>
+						<div class="hex-avatar">
+							<img src="/images/team/alan.png" alt="Alan">
+						</div>
+						<div class="info">
+							<h3><span>alan</span> richman</h3>
+							<p>CEO of Romashka</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="table">
+						<div class="text">
+							<p class="ipsum">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+						</div>
+						<div class="hex-avatar">
+							<img src="/images/team/alan.png" alt="Alan">
+						</div>
+						<div class="info">
+							<h3><span>alan</span> richman</h3>
+							<p>CEO of Romashka</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nav-arrows clearfix"></div>
+			<div class="daisy-address">
+				<div class="hexagon">
+					<div class="hex-inner">
+						<h3>Daisy</h3>
+						<p>615 4th Ave S, Jackson-ville Beach, FL 32250</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
+	<div id="google-map">
+		<div id="map"></div>
+	</div>
+	<footer id="footer">
+		<div class="wrapper">
+			<a class="logo">
+				<img src="/images/Daisy.png" alt="Daisy">
+			</a>
+		</div>
+	</footer>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="lib/slick/slick/slick.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT-5duZG-XT1285UpZZboJ60u3SGX40ls&callback=initMap"></script>
+	<script src="https://use.fontawesome.com/97cb3eda48.js"></script>
+	<script src="js/common.js"></script>
 	<script>
-		var  elements = document.querySelectorAll('.ipsum');
-		var tagValue= "";
-		for(var i in elements){
-			if(elements.hasOwnProperty(i)){
-				tagValue = elements[i].innerHTML;
-				elements[i].setAttribute('title', tagValue)
-			}
+		// GOOGLE MAP
+		function initMap() {
+			var kharkov = {lat: 50.0261, lng: 36.2147};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				center: kharkov
+			});
+			var marker = new google.maps.Marker({
+				position: kharkov,
+				map: map
+			});
 		}
 	</script>
 </body>
