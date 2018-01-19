@@ -649,31 +649,5 @@ h3{
 		margin: 58px 0 23px;
 	}
 }
-.test{
-	height: 1000px;
-	.figure{
-		height: 60px;
-		width: 100px;
-		position: relative;
-		background-color: $accent;
-		border-left: 5px solid $light-accent;
-		border-right: 5px solid $light-accent;
-	}
-	.figure::after, .figure::before{
-		content: '';
-		display: block;
-		width: 70px;
-		height: 70px;
-		position: absolute;
-		z-index: -1;
-		transform: rotate(45deg);
-		background-color: $accent;
-	}
-	.figure::after{
-		top: 25px;
-		left: 16px;
-	}
-}
-
 @import "media";
 
