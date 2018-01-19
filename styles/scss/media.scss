@@ -12,4 +12,174 @@
 			}
 		}
 	}
+	#advertising-section{
+		.wrap{
+			padding-top: 35px;
+			margin-bottom: 42px;
+		}
+	}
+	#marketing-section{
+		.wrap{
+			padding-top: 25px;
+		}
+	}
+	#portfolio-section{
+		.portfolio-menu{
+			.menu-navigation{
+				a::before{
+					display: none;
+				}
+			}
+		}
+	}	
+	#our-team{
+		.team{
+			li{
+				max-width: 50%;
+			}
+		}
+	}
+}
+
+@media(max-width: 767px){
+	#header{
+		.menu-holder{
+			overflow: hidden;
+			ul{
+				position: absolute;
+				right: -500px;
+				top: -200px;
+				visibility: visible;
+			}
+		}
+		.morphing-menu{
+			display: block;
+		}
+		.opened{
+			overflow: visible !important;
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			.menu-navigation{
+				transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1);
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				background-color: rgba(255,100,95, 0.8);
+				border-radius: 2%;
+				z-index: 18;
+				li{
+					display: block;
+					border-bottom: 2px solid transparent;
+					text-transform: uppercase;
+					width: 100%;
+					float: left;
+					clear: both;
+					transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+					margin: 0;
+					&:first-child{
+						margin-top: 20vh;
+					}
+					&:hover{
+						border-color: $white;
+					}
+					a{
+						color: #fff;
+						font-family: AgoraSansProThin;
+						font-size: 16px;
+						width: 100%;
+						display: block;
+						float: left;
+						line-height: 40px;
+					}
+				}
+			}
+
+		}
+	}
+	#offers-section{
+		.ipsum{
+			margin-bottom: 45px;
+		}
+	}
+	#expand-section{
+		.opacity-border{
+			padding-top: 54px;
+			margin: 61px 0 33px;
+			.wrap{
+				margin-bottom: 60px;
+			}
+		}
+	}
+	#portfolio-section{
+		padding-top: 31px;
+		.pictures-grid{
+			.picture-block{
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+			}
+		}
+
+	}
+	#our-team{
+		.team{
+			li{
+				max-width: 100%;
+				margin-top: 80px;
+				&:nth-child(1){
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+	#personal-info{
+		.quotes{
+			margin-bottom: 45px;
+		}
+		.team-slider{
+			.slide{
+				.table > *{
+					display: block;
+					padding: 0;
+					margin: 0 auto 30px;
+					width: auto;
+				}
+				.hex-avatar{
+					img{
+						margin: 0 auto;
+					}
+				}
+				.info{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 480px){
+	.hollow-button, .my-button{
+		width: 185px;
+		height: 46px;
+		line-height: 42px;
+	}
+	h2{
+		font-size: 41px;
+	}
+	#header{
+		margin-bottom: 90px;
+	}
+	.banner-info{
+		.hollow-button::after{
+			display: none;
+		}
+		.wrap{
+			margin-bottom: 80px;
+		}
+	}
+
 }

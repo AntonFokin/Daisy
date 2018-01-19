@@ -5,9 +5,10 @@
 
 body{
 	background: $white;
+	min-width: 320px;
 }
 // START COMMON STYLES
-.clearfix::after{
+.clearfix::after, .clearfix::before{
 	content: "";
 	clear: both;
 	display: block;
@@ -118,6 +119,7 @@ h3{
 	text-align: center;
 	height: 100%;
 	margin-top: 22px;
+	position: relative;
 	.menu-navigation > li{
 		display: inline-block;
 		text-transform: uppercase;
@@ -140,16 +142,19 @@ h3{
 
 //START MORPHING MENU
 .morphing-menu{
-	position: fixed;
-	top: 24px;
+	position: relative;
+	float: right;
+	top: 7px;
 	right: 40px;
-	width: 50px;
+	width: 51px;
 	height: 50px;
-	display: block;
+	display: none;
 	cursor: pointer;
+	background-color: transparent;
+	border: none;
 	transition: opacity 0.2s linear;
-	&:hover{
-		opacity: 0.8;
+	&:focus{
+		outline: none;
 	}
 	span{
 		display: block;
@@ -160,87 +165,51 @@ h3{
 		border-radius: 40px;
 		background-color: $accent;
 		position: absolute;
-		right: 3px;
-		top: 3px;
-		overflow: hidden;
+		right: 5px;
+		top: 0;
 		transition: all 0.4s ease;
-		&:nth-child(1){
-			margin-top: 10px;
-		}
-		&:nth-child(2){
-			margin-top: 25px;
-		}
-		&:nth-child(3){
-			margin-top: 40px;
-		}
-	}
-}
-.sub-menu{
-	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	height: 0;
-	width: 0;
-	right: 0;
-	top: 0;
-	position: absolute;
-	background-color: rgba(255,100,95, 0.54);
-	border-radius: 2%;
-	z-index: 18;
-	overflow: hidden;
-	li{
-		display: block;
-		border-bottom: 2px solid transparent;
-		text-transform: uppercase;
-		float: left;
-		clear: both;
-		height: auto;
-		margin-right: -160px;
-		transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		&:first-child{
-			margin-top: 210px;
-		}
-		&:hover{
-			border-color: $white;
-		}
-		a{
-			color: #fff;
-			font-family: AgoraSansProThin;
-			font-size: 16px;
-			width: 100%;
+		margin-top: 25px;
+		&::before,&::after{
+			content: '';
 			display: block;
 			float: left;
-			line-height: 40px;
+			clear: both;
+			height: 4px;
+			width: 40px;
+			border-radius: 40px;
+			background-color: $accent;
+			position: absolute;
+			right: 0;
+			top: -25px;
+			transition: all 0.4s ease;
 		}
+		&::before{
+			margin-top: 10px;
+		}
+		&::after{
+			margin-top: 40px;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+
 	}
 }
 
-.opened{
-	.sub-menu{
-		opacity: 1;
-		height: 400px;
-		width: 400px;
-	}
-	span:nth-child(2){
-		overflow: visible;
-	}
-	span:nth-child(1), span:nth-child(3){
+.button-animation{
+	span{
+		transition: opacity 0s linear;
+		background-color: transparent;
 		z-index: 100;
 	}
-	span:nth-child(1){
+	span::before, span::after{
+		background-color: $white;
+	}
+	span::before{
 		transform: rotate(45deg) translateY(12px) translateX(12px);
 	}
-	span:nth-child(2){
-		height: 400px;
-		width: 400px;
-		right: -160px;
-		top: -160px;
-		border-radius: 2%;
-		background-color: rgba(255,100,95, 0.54);
-	}
-	span:nth-child(3){
+	span::after{
 		transform: rotate(-45deg) translateY(-10px) translateX(10px);
-	}
-	li{
-		margin-left: 90px;
 	}
 }
 // END MORPHING MENU
@@ -248,22 +217,28 @@ h3{
 .banner-info{
 	margin: 0 auto;
 	text-align: center;
-
-	h2:before,
-	h2:after {
+	.wrapper-for-lines{
+		position: relative;
+		padding: 0 10%;
+	}
+	.wrapper-for-lines:before,
+	.wrapper-for-lines:after {
 		background-color: #4e4d4d;
 		content: "";
 		display: inline-block;
 		height: 8px;
-		position: relative;
-		bottom: 13px;
+		position: absolute;
+		top: 46%;
 		width: 8%;
+		h2{
+			display: inline-block;
+		}
 	}
-	h2:before {
-		right: 0.5em;
+	.wrapper-for-lines:before {
+		right: 1%;
 	}
-	h2:after {
-		left: 0.5em;
+	.wrapper-for-lines:after {
+		left: 1%;
 	}
 	p{
 		font-family: AgoraSansProLight;
@@ -272,16 +247,13 @@ h3{
 		margin-bottom: 48px;
 	}
 	.wrap{
-		position: relative;
-		width: 205px;
-		height: 56px;
 		margin: 0 auto 241px;
 	}
-	.wrap::after{
+	.hollow-button::after{
 		content: url('/images/Mouse.png');
 		position: absolute;
-		left: 220px;
-		top: 13px;
+		left: 104%;
+		top: 20%;
 	}
 	.arrow{
 		height: 28px;
@@ -305,7 +277,7 @@ h3{
 		margin-bottom: 54px;
 		li {
 			display: inline-block;
-			max-width: 25%;
+			margin-top: 20px;
 		}
 		h4 {
 			text-transform: uppercase;
@@ -332,14 +304,16 @@ h3{
 	background: url("/images/bg-city.jpg") no-repeat center top;
 	background-size: cover;
 	text-align: center;
-	.wrapper{
-		padding-top: 223px;
+	.opacity-border{
+		padding-top: 124px;
+		margin: 91px 0 33px;
+		border: 8px solid rgba(255, 255, 255, 0.1);
 	}
 	h2{
 		margin-bottom: 52px;
 	}
 	.wrap{
-		margin-bottom: 161px;
+		margin-bottom: 100px;
 	}
 	.arrow{
 		margin-bottom: 5px;
@@ -426,9 +400,9 @@ h3{
 #marketing-section{
 	text-align: center;
 	background-color: $greyBg;
-	padding-top: 134px;
 	.wrap{
 		margin-bottom: 50px;
+		padding-top: 134px;
 		.text-info{
 			float: left;
 			max-width: 45%;
@@ -482,22 +456,30 @@ h3{
 		}
 	}
 	.pictures-grid{
-		width: 98%;
-		margin: 0 1% 54px;
+		img{
+			width: 100%;
+			max-width: none;
+		}
+		margin: 6px -6px;
 		font-size: 0;
 		.picture-block{
 			display: inline-block;
 			width: 50%;
-			min-width: 50%;
+			padding: 6px;
 			.full-picture{
-				margin: 6px;
-				width: 442px;
-				float: left;
+				width: 100%;
+				display: inline-block;
+				margin: 6px -6px;
 			}
 			.half-picture{
-				margin: 6px;
-				width: 215px;
-				float: left;
+				display: inline-block;
+				width: 50%;
+				&:nth-child(odd){
+					padding-right: 6px;
+				}
+				&:nth-child(even){
+					padding-left: 6px;
+				}
 			}
 		}
 	}
@@ -512,17 +494,20 @@ h3{
 	text-align: center;
 	background-color: $greyBg;
 	h3{
-		margin-bottom: 73px;
+		margin-bottom: 33px;
 	}
 	.team{
 		width: 100%;
+		margin-bottom: 71px;
+		font-size: 0;
 		.hex-avatar{
 			margin-bottom: 26px;
 		}
 		li {
 			display: inline-block;
 			width: 100%;
-			max-width: 30.33%;
+			max-width: 33.33%;
+			margin-top: 40px;
 			h3{
 				color: $darkGrey;
 				text-transform: capitalize;
@@ -537,7 +522,6 @@ h3{
 			}
 		}
 		.social{
-			margin-bottom: 71px;
 			li{
 				display: inline-block;
 				width: 37px;
@@ -548,7 +532,10 @@ h3{
 				a{
 					display: block;
 					color: $greyBg;
-					line-height: 37px;
+					i{
+						line-height: 37px;
+						font-size: 24px;
+					}
 				}
 			}
 		}
@@ -567,35 +554,35 @@ h3{
 	.team-slider{
 		text-align: center;
 		margin-bottom: 52px;
-		.slide{
-			.table{
-				display: table;
-				width: 100%;
-				& > *{
-					display: table-cell;
-					vertical-align: middle;
+		.table{
+			display: table;
+			width: 100%;
+			& > *{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.text{
+				width: 41.3%;
+				padding-right: 69px;
+				.ipsum{
+					height: auto;
 				}
-				.text{
-					width: 38.7%;
-					padding: 0 30px;
+			}
+			.info{
+				text-align: left;
+				width: 39%;
+				padding-left: 69px;
+				h3{
+					color: $grey;
+					text-transform: capitalize;
+					font-size: 29px;
+					font-family: AgoraSansProMedium;
+					border: none;
 				}
-				.info{
-					text-align: left;
-					width: 39%;
-					padding: 0 30px;
-					h3{
-						color: $grey;
-						text-transform: capitalize;
-						font-size: 29px;
-						font-family: AgoraSansProMedium;
-						border: none;
-					}
-				}
-				.hex-avatar{
-					height: 185px;
-					width: 224px;
-					padding:0 30px;
-				}
+			}
+			.hex-avatar{
+				height: 185px;
+				width: 224px;
 			}
 		}
 	}
@@ -662,36 +649,31 @@ h3{
 		margin: 58px 0 23px;
 	}
 }
+.test{
+	height: 1000px;
+	.figure{
+		height: 60px;
+		width: 100px;
+		position: relative;
+		background-color: $accent;
+		border-left: 5px solid $light-accent;
+		border-right: 5px solid $light-accent;
+	}
+	.figure::after, .figure::before{
+		content: '';
+		display: block;
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		z-index: -1;
+		transform: rotate(45deg);
+		background-color: $accent;
+	}
+	.figure::after{
+		top: 25px;
+		left: 16px;
+	}
+}
+
 @import "media";
-	//.hexagon:before, .double:after {
-	//	position: absolute;
-	//	content: '';
-	//}
-	//.hexagon:before {
-	//	top: 4px;  /* border width */
-	//	left: 4px;  /* border width */
-	//	height: calc(100% - 8px);  /* 100% - (2 * border width) */
-	//	width: calc(100% - 8px);  /* 100% - (2 * border width) */
-	//	background: $accent;
-	//}
-	//.hexagon, .hexagon:before, .double:after {
-	//	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	//	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	//}
-	//.image:before {
-	//	background: url(/images/icons/white-rocket.png) no-repeat center;
-	//}
-	//.double:after {
-	//	top: 8px;
-	//	left: 8px;
-	//	height: calc(100% - 16px);
-	//	width: calc(100% - 16px);
-	//	background: $accent;
-	//}
-	//
-	///* Just for demo */
-	//
-	//.hexagon {
-	//	display: inline-block;
-	//	margin: 20px;
-	//}
+

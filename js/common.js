@@ -21,15 +21,13 @@ $(document).ready(function() {
 
 // MORPHING MENU
 	$('.morphing-menu').on('click', function (event) {
-		$(this).addClass('opened');
+		$(this).toggleClass('button-animation');
+		$('.menu-holder').toggleClass('opened');
 		event.stopPropagation();
 	});
 	$('body').on('click', function () {
-		$('.morphing-menu').removeClass('opened');
-	});
-	$('.cls').on('click', function (event) {
-		$('.morphing-menu').removeClass('opened');
-		event.stopPropagation();
+		$('.morphing-menu').removeClass('button-animation');
+		$('.menu-holder').removeClass('opened');
 	});
 
 
@@ -49,7 +47,7 @@ $(document).ready(function() {
 	setTitle(elements);
 
 // SMOOTH SCROLLING
-	$(".menu-navigation, .morphing-menu").on("click", "a", function (event) {
+	$(".menu-navigation, .morphing-menu, .arrow").on("click", "a", function (event) {
 		event.preventDefault();
 		var id = $(this).attr('href'),
 			top = $(id).offset().top;
