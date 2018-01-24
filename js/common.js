@@ -14,8 +14,8 @@ $(document).ready(function() {
 // SLICK CAROUSEL
 	$('.team-slider').slick({
 		'appendArrows': $('.nav-arrows'),
-		'nextArrow': '<button type="button" class="slick-next"><img src="/images/icons/next-arrow.png"></button>',
-		'prevArrow': '<button type="button" class="slick-prev"><img src="/images/icons/prev-arrow.png"></button>'
+		'nextArrow': '<button type="button" class="slick-next"><img src="images/icons/next-arrow.png"></button>',
+		'prevArrow': '<button type="button" class="slick-prev"><img src="images/icons/prev-arrow.png"></button>'
 	});
 
 

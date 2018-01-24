@@ -177,7 +177,7 @@ h3 {
   background: #ffffff; }
 
 #top-section {
-  background: url("/images/bg-women.jpg") no-repeat center top;
+  background: url("../../images/bg-women.jpg") no-repeat center top;
   background-size: cover; }
 
 #header {
@@ -313,7 +313,7 @@ h3 {
   .banner-info .wrap {
     margin: 0 auto 241px; }
   .banner-info .hollow-button::after {
-    content: url("/images/Mouse.png");
+    content: url("../../images/Mouse.png");
     position: absolute;
     left: 104%;
     top: 20%; }
@@ -354,7 +354,7 @@ h3 {
       height: 42px; }
 
 #expand-section {
-  background: url("/images/bg-city.jpg") no-repeat center top;
+  background: url("../../images/bg-city.jpg") no-repeat center top;
   background-size: cover;
   text-align: center; }
   #expand-section .opacity-border {
@@ -619,7 +619,7 @@ h3 {
     width: 100%; }
 
 #footer {
-  background: url("/images/bg-iphone.jpg") no-repeat center top;
+  background: url("../../images/bg-iphone.jpg") no-repeat center top;
   background-size: cover;
   text-align: center; }
   #footer .logo {
